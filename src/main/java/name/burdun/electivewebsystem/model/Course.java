@@ -38,4 +38,13 @@ public class Course {
     public void setID_Professor(int ID_Professor) {
         this.ID_Professor = ID_Professor;
     }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "ID_Course=" + ID_Course +
+                ", Title='" + Title + '\'' +
+                ", ID_Professor=" + ID_Professor +
+                '}';
+    }
 }

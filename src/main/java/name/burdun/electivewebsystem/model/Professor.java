@@ -8,6 +8,9 @@ public class Professor {
     private int ID_Professor;
     private String Surname;
 
+    public Professor() {
+    }
+
     public Professor(int ID, String surname) {
         this.ID_Professor = ID;
         Surname = surname;
@@ -27,5 +30,13 @@ public class Professor {
 
     public void setSurname(String surname) {
         Surname = surname;
+    }
+
+    @Override
+    public String toString() {
+        return "Professor{" +
+                "ID_Professor=" + ID_Professor +
+                ", Surname='" + Surname + '\'' +
+                '}';
     }
 }
