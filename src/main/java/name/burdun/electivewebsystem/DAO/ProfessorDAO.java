@@ -2,6 +2,7 @@ package name.burdun.electivewebsystem.DAO;
 
 import name.burdun.electivewebsystem.JdbcConnection.WrapperConnector;
 import name.burdun.electivewebsystem.model.Professor;
+import static name.burdun.electivewebsystem.DAO.SQLQueries.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,9 +15,6 @@ import java.util.List;
  */
 public class ProfessorDAO extends AbstractDAO {
 
-    public static final String SQL_SELECT_ALL_PROFESSORS =
-            "SELECT * FROM professors";
-
     public ProfessorDAO() {
         this.connector = new WrapperConnector();
     }
@@ -27,7 +25,7 @@ public class ProfessorDAO extends AbstractDAO {
         try {
             st = connector.getStatement();
             ResultSet resultSet =
-                    st.executeQuery(SQL_SELECT_ALL_PROFESSORS);
+                    st.executeQuery(FIND_ALL_PROFESSORS);
             while (resultSet.next()) {
                 Professor professor = new Professor();
                 professor.setID_Professor(resultSet.getInt("ID_Professor"));

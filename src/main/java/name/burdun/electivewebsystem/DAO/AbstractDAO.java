@@ -20,11 +20,11 @@ public abstract class AbstractDAO {
     public abstract T update(T entity);
     */
 
-    public void closeConnection() {
-        connector.closeConnection();
-    }
-
     protected void closeStatement(Statement statement) {
         connector.closeStatement(statement);
+    }
+
+    public void closeConnection() {
+        connector.closeConnection();
     }
 }
