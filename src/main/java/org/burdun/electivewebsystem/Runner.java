@@ -1,7 +1,7 @@
-package name.burdun.electivewebsystem;
+package org.burdun.electivewebsystem;
 
-import name.burdun.electivewebsystem.DAO.ProfessorDAO;
-import name.burdun.electivewebsystem.model.Professor;
+import org.burdun.electivewebsystem.DAO.ProfessorDAO;
+import org.burdun.electivewebsystem.model.Professor;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package name.burdun.electivewebsystem.DAO;
+package org.burdun.electivewebsystem.DAO;
 
-import name.burdun.electivewebsystem.JdbcConnection.WrapperConnector;
-import name.burdun.electivewebsystem.model.Professor;
-import static name.burdun.electivewebsystem.DAO.SQLQueries.*;
+import org.burdun.electivewebsystem.JdbcConnection.WrapperConnector;
+import org.burdun.electivewebsystem.model.Professor;
+import static org.burdun.electivewebsystem.DAO.SQLQueries.*;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -28,7 +28,7 @@ public class ProfessorDAO extends AbstractDAO {
                     st.executeQuery(FIND_ALL_PROFESSORS);
             while (resultSet.next()) {
                 Professor professor = new Professor();
-                professor.setID_Professor(resultSet.getInt("ID_Professor"));
+                professor.setIdProfessor(resultSet.getInt("ID_Professor"));
                 professor.setSurname(resultSet.getString("Surname"));
                 abonents.add(professor);
             }

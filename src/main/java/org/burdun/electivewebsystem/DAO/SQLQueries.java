@@ -1,4 +1,4 @@
-package name.burdun.electivewebsystem.DAO;
+package org.burdun.electivewebsystem.DAO;
 
 import java.util.ResourceBundle;
 

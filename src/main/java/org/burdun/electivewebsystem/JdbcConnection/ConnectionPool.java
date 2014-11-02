@@ -1,4 +1,4 @@
-package name.burdun.electivewebsystem.JdbcConnection;
+package org.burdun.electivewebsystem.JdbcConnection;
 
 import java.sql.Connection;
 import java.sql.SQLException;

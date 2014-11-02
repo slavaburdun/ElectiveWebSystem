@@ -1,7 +1,7 @@
-package name.burdun.electivewebsystem.controller;
+package org.burdun.electivewebsystem.controller;
 
-import name.burdun.electivewebsystem.DAO.ProfessorDAO;
-import name.burdun.electivewebsystem.model.Professor;
+import org.burdun.electivewebsystem.DAO.ProfessorDAO;
+import org.burdun.electivewebsystem.model.Professor;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +14,7 @@ import javax.servlet.annotation.WebServlet;
 /**
  * Created by burdun on 30.09.2014.
  */
-@WebServlet("/timeaction")
+@WebServlet("/Servlet")
 public class Servlet extends HttpServlet {
 
     @Override
@@ -36,14 +36,16 @@ public class Servlet extends HttpServlet {
 
         ProfessorDAO professorDAO = new ProfessorDAO();
         List<Professor> list = professorDAO.findAll();
+        /*
         if (list.size() > 0) {
             out = list.toString();
         } else {
             out = "Not found";
         }
+        */
         professorDAO.closeConnection();
 
-        request.setAttribute("out", out);
-        request.getRequestDispatcher("result.jsp").forward(request, response);
+        request.setAttribute("list", list);
+        request.getRequestDispatcher("/WEB-INF/jsp/result.jsp").forward(request, response);
     }
 }

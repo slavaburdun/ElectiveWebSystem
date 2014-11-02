@@ -1,6 +1,6 @@
-package name.burdun.electivewebsystem.DAO;
+package org.burdun.electivewebsystem.DAO;
 
-import name.burdun.electivewebsystem.JdbcConnection.WrapperConnector;
+import org.burdun.electivewebsystem.JdbcConnection.WrapperConnector;
 
 import java.sql.Statement;
 

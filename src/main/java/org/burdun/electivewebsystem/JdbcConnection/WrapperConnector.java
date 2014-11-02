@@ -1,11 +1,8 @@
-package name.burdun.electivewebsystem.JdbcConnection;
+package org.burdun.electivewebsystem.JdbcConnection;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.MissingResourceException;
-import java.util.ResourceBundle;
 
 /**
  * Created by burdun on 26.09.2014.
@@ -14,7 +11,7 @@ public class WrapperConnector {
 
     private Connection connection;
 
-    /* Use this for Tomcat
+    // Use this for Tomcat
     public WrapperConnector() {
         try {
             connection = ConnectionPool.getConnection();
@@ -22,8 +19,9 @@ public class WrapperConnector {
             System.err.println("not obtained connection " + e);
         }
     }
-    */
+    //
 
+    /*
     public WrapperConnector() {
         try {
             ResourceBundle resource = ResourceBundle.getBundle("database");
@@ -37,6 +35,7 @@ public class WrapperConnector {
             System.err.println("not obtained connection " + e);
         }
     }
+    */
 
     public Statement getStatement() throws SQLException {
         if (connection != null) {
